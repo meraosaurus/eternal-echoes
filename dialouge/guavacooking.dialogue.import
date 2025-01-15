@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://dr520hicxn65m"
+path="res://.godot/imported/guavacooking.dialogue-12c0f8bc579b61d2cd7e0e07cd3b797c.tres"
+
+[deps]
+
+source_file="res://dialouge/guavacooking.dialogue"
+dest_files=["res://.godot/imported/guavacooking.dialogue-12c0f8bc579b61d2cd7e0e07cd3b797c.tres"]
+
+[params]
+
+defaults=true

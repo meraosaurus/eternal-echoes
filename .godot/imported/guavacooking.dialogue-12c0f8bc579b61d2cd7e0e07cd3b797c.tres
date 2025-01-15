@@ -1,0 +1,90 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_emurn"]
+
+[resource]
+script = ExtResource("1_emurn")
+using_states = PackedStringArray()
+titles = {
+"start": "2"
+}
+character_names = PackedStringArray()
+first_title = "2"
+lines = {
+"1": {
+"id": "1",
+"next_id": "2",
+"text": "start",
+"type": &"title"
+},
+"2": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "2",
+"next_id": "3",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Welcome to van's confectionary!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Welcome to van's confectionary!",
+"type": &"dialogue"
+},
+"3": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "First, let's slice the guavas into smaller pieces! Grab your knife and carefully chop, chop, chop!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "First, let's slice the guavas into smaller pieces! Grab your knife and carefully chop, chop, chop!",
+"type": &"dialogue"
+},
+"4": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "cookingarea.choppedguava()",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "cookingarea.choppedguava()",
+"type": &"dialogue"
+},
+"5": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Next, it's time to blend the guavas! Put the pieces into the blender and—whirr, whirr, blend it up!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Next, it's time to blend the guavas! Put the pieces into the blender and—whirr, whirr, blend it up!",
+"type": &"dialogue"
+},
+"6": {
+"id": "6",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"9": {
+"id": "9",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+}
+}
+raw_text = "~ start
+Welcome to van's confectionary!
+First, let's slice the guavas into smaller pieces! Grab your knife and carefully chop, chop, chop! 
+cookingarea.choppedguava() 
+Next, it's time to blend the guavas! Put the pieces into the blender and—whirr, whirr, blend it up!
+=> END
+
+
+=> END"
+metadata/dialogue_manager_version = "2.44.1"

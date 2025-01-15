@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0u7gn3j6jlxg"]
+
+[ext_resource type="Texture2D" uid="uid://dpi6kuw6ijad" path="res://Slorey α▒¿αºÄ assets/UI/home screen ui/bag icon.PNG" id="1_dx4ar"]
+[ext_resource type="Script" path="res://ui_/inventorybtn.gd" id="1_jqme5"]
+
+[node name="inventorybtn" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1574.0
+offset_bottom = -1062.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jqme5")
+
+[node name="inventorybtn" type="Button" parent="."]
+layout_mode = 0
+offset_right = 2727.0
+offset_bottom = 2490.0
+scale = Vector2(0.1, 0.1)
+icon = ExtResource("1_dx4ar")
+flat = true
+
+[connection signal="pressed" from="inventorybtn" to="." method="_on_inventorybtn_pressed"]

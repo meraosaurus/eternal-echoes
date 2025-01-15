@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnrupxb73vbkc"]
+
+[ext_resource type="Script" path="res://knife_.gd" id="1_i726g"]
+[ext_resource type="Texture2D" uid="uid://cnja0ky17k5qc" path="res://tilesets/interiors/knife.png" id="2_2tagw"]
+[ext_resource type="Script" path="res://knife_tex.gd" id="3_xavmk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wknhm"]
+size = Vector2(32, 13)
+
+[node name="knife_" type="Node2D"]
+script = ExtResource("1_i726g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(10.75, 3.75)
+scale = Vector2(2.43333, 2.5)
+texture = ExtResource("2_2tagw")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(8, 3.5)
+shape = SubResource("RectangleShape2D_wknhm")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(10, 5)
+offset_left = -37.0
+offset_right = 40.0
+offset_bottom = 22.0
+texture = ExtResource("2_2tagw")
+expand_mode = 1
+script = ExtResource("3_xavmk")
+
+[node name="Panel" type="Panel" parent="TextureRect"]
+layout_mode = 0
+offset_left = 89.0
+offset_top = -1.0
+offset_right = 187.0
+offset_bottom = 34.0
+mouse_filter = 2
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

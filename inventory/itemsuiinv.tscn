@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://m2fcgjucxi73"]
+
+[ext_resource type="Script" path="res://inventory/itemsuiinv.gd" id="1_4ow3i"]
+[ext_resource type="FontFile" uid="uid://dnh6xb1b6i4ig" path="res://Slorey α▒¿αºÄ assets/fonts/Body/handwritten/kg_primary_penmanship/KGPrimaryPenmanship.ttf" id="1_bou0i"]
+
+[node name="Panel" type="Panel"]
+script = ExtResource("1_4ow3i")
+
+[node name="itemdisplay" type="Sprite2D" parent="."]
+position = Vector2(2.08165e-12, 2.08165e-12)
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(19, 24)
+layout_mode = 0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 21.0
+offset_bottom = 29.0
+theme_override_colors/font_color = Color(0.25098, 0.14902, 0.101961, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_bou0i")
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 2

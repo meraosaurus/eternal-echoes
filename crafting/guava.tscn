@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://cycdxmh70ayn0"]
+
+[ext_resource type="Texture2D" uid="uid://bdjkti5oo6pyj" path="res://crafting/interiors/guava.PNG" id="1_1awvg"]
+[ext_resource type="Script" path="res://crafting/guava.gd" id="1_4x70y"]
+[ext_resource type="Texture2D" uid="uid://qf4a38idg6nc" path="res://crafting/interiors/chopped but its bigger.PNG" id="2_bxrla"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_swlsk"]
+atlas = ExtResource("2_bxrla")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpel2"]
+atlas = ExtResource("1_1awvg")
+region = Rect2(0, 0, 60, 60)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ajcn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swlsk")
+}],
+"loop": true,
+"name": &"chopped",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpel2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lw448"]
+radius = 25.0
+
+[node name="guava" type="Node2D"]
+script = ExtResource("1_4x70y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3, 23)
+scale = Vector2(0.618522, 0.580794)
+sprite_frames = SubResource("SpriteFrames_5ajcn")
+
+[node name="guava" type="Area2D" parent="."]
+priority = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="guava"]
+position = Vector2(-12, 19)
+shape = SubResource("CircleShape2D_lw448")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.114
+one_shot = true
+
+[connection signal="area_entered" from="guava" to="." method="_on_guava_area_entered"]
+[connection signal="input_event" from="guava" to="." method="_on_area_2d_input_event"]

@@ -1,0 +1,15 @@
+res://crafting/cooking.tscn
+res://inventory/playerinv.tres
+res://Levels/Level_1/grand etang alt.tscn
+res://inventory/inventory_ui.tscn
+res://Levels/Level_1/village.tscn
+res://ui_/confectionary_ui.tscn
+res://scenes/grandetangcabin.tscn
+res://crafting/guava.tscn
+res://crafting/blender.tscn
+res://crafting/cooking_area.gd
+res://addons/dialogue_manager/example_balloon/example_balloon.tscn
+res://addons/dialogue_manager/example_balloon/example_balloon.gd
+res://crafting/guava.gd
+res://crafting/knife_.gd
+res://crafting/passingtodialouge.gd

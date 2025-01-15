@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://dc307fq6xhxnl"]
+
+[ext_resource type="Texture2D" uid="uid://bd1iua4j1udh" path="res://Slorey α▒¿αºÄ assets/UI/ui screens_tabs/quest.PNG" id="1_eab8f"]
+
+[node name="quest_ui" type="Control"]
+layout_mode = 3
+anchor_right = 0.979
+anchor_bottom = 1.116
+offset_right = -3.90606
+offset_bottom = -19.2041
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_right = 890.0
+offset_bottom = 707.0
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("1_eab8f")

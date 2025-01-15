@@ -1,0 +1,140 @@
+[gd_scene load_steps=14 format=3 uid="uid://deylbua2xnslw"]
+
+[ext_resource type="PackedScene" uid="uid://csh3omiqlvex" path="res://Characters/vanessa_lilac.tscn" id="1_bjgdw"]
+[ext_resource type="PackedScene" uid="uid://d0unm051l8nvk" path="res://inventory/inventory_ui.tscn" id="1_l4tq2"]
+[ext_resource type="PackedScene" uid="uid://dhvvp2nddrqjx" path="res://tree scripts/mango_tree.tscn" id="3_y6abj"]
+[ext_resource type="PackedScene" uid="uid://bb8pm8xqmu5wr" path="res://nutmeg_tree.tscn" id="4_w1mqu"]
+[ext_resource type="PackedScene" uid="uid://dmt5w14c74psi" path="res://ui_/close.tscn" id="5_2i4t4"]
+[ext_resource type="PackedScene" uid="uid://c2sgxyr5jyalw" path="res://inventory/hotbar.tscn" id="5_5gdud"]
+[ext_resource type="PackedScene" uid="uid://dc307fq6xhxnl" path="res://ui_/questscreen.tscn" id="5_hwp10"]
+[ext_resource type="PackedScene" uid="uid://b4l50qypmm0c3" path="res://ui_/settingsscreen.tscn" id="6_8hxbv"]
+[ext_resource type="PackedScene" uid="uid://dcofalsshvf8m" path="res://ui_/characterstats.tscn" id="7_j03jr"]
+[ext_resource type="PackedScene" uid="uid://c0u7gn3j6jlxg" path="res://ui_/inventorybtn.tscn" id="7_xcw4v"]
+[ext_resource type="PackedScene" uid="uid://b4piyt2a6xi45" path="res://ui_/coincounter.tscn" id="8_dwvax"]
+[ext_resource type="PackedScene" uid="uid://bnrco8600b5nu" path="res://ui_/questbtn.tscn" id="9_8uq2t"]
+[ext_resource type="PackedScene" uid="uid://bgwlkfamrs8r5" path="res://ui_/settingsbtn.tscn" id="12_7brbo"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="vanessa lilac" parent="." instance=ExtResource("1_bjgdw")]
+
+[node name="mango tree" parent="." instance=ExtResource("3_y6abj")]
+position = Vector2(276, -36)
+
+[node name="nutmeg_tree" parent="." instance=ExtResource("4_w1mqu")]
+position = Vector2(-214, 13)
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 0
+follow_viewport_enabled = true
+
+[node name="inventory ui" parent="CanvasLayer2" instance=ExtResource("1_l4tq2")]
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
+offset_left = -1031.0
+offset_top = -619.0
+offset_right = 904.0
+offset_bottom = 569.0
+
+[node name="close" parent="CanvasLayer2/inventory ui" instance=ExtResource("5_2i4t4")]
+layout_mode = 1
+offset_left = 1784.0
+offset_top = -33.0
+offset_right = 1784.21
+offset_bottom = -43.912
+scale = Vector2(2, 2)
+
+[node name="quest_ui" parent="CanvasLayer2" instance=ExtResource("5_hwp10")]
+anchor_left = -0.241
+anchor_top = -0.44
+anchor_right = 0.775
+anchor_bottom = 0.697
+offset_left = -61.826
+offset_top = 8.36003
+offset_right = -134.85
+offset_bottom = -26.493
+
+[node name="close2" parent="CanvasLayer2/quest_ui" instance=ExtResource("5_2i4t4")]
+layout_mode = 1
+anchor_left = 0.476
+anchor_top = 0.018
+anchor_right = 0.532
+anchor_bottom = 0.094
+offset_left = -0.520019
+offset_top = 0.655937
+offset_right = -49.64
+offset_bottom = -53.3521
+scale = Vector2(2, 2)
+
+[node name="settings" parent="CanvasLayer2" instance=ExtResource("6_8hxbv")]
+anchor_left = -0.28
+anchor_top = -0.402
+anchor_right = 0.558
+anchor_bottom = 0.43
+offset_left = 5.92
+offset_top = 27.138
+offset_right = -61.2122
+offset_bottom = -27.67
+
+[node name="close2" parent="CanvasLayer2/settings" instance=ExtResource("5_2i4t4")]
+layout_mode = 1
+anchor_left = 0.549
+anchor_top = 0.18
+anchor_right = 0.61
+anchor_bottom = 0.24
+offset_left = -15.697
+offset_top = -29.18
+offset_right = -52.3299
+offset_bottom = -40.24
+scale = Vector2(2, 2)
+
+[node name="onscreen btns" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="Hotbar" parent="onscreen btns" instance=ExtResource("5_5gdud")]
+offset_left = 1157.0
+offset_top = 1351.0
+offset_right = 1297.0
+offset_bottom = 1383.0
+scale = Vector2(4, 4)
+
+[node name="inventorybn" parent="onscreen btns" instance=ExtResource("7_xcw4v")]
+anchors_preset = -1
+anchor_right = 0.136
+anchor_bottom = 0.191
+offset_left = 500.0
+offset_top = 1280.0
+offset_right = 522.296
+offset_bottom = 1276.62
+
+[node name="character_stat" parent="onscreen btns" instance=ExtResource("7_j03jr")]
+offset_left = 27.0
+offset_top = 31.0
+offset_right = 574.0
+offset_bottom = 237.0
+
+[node name="coin counter" parent="onscreen btns" instance=ExtResource("8_dwvax")]
+offset_left = 2500.0
+offset_top = -0.538
+offset_right = 2499.09
+offset_bottom = -2.11101
+scale = Vector2(7, 7)
+
+[node name="questbtn" parent="onscreen btns" instance=ExtResource("9_8uq2t")]
+anchors_preset = -1
+anchor_right = 0.132
+anchor_bottom = 0.163
+offset_left = 170.0
+offset_top = 1280.0
+offset_right = 170.552
+offset_bottom = 1280.15
+
+[node name="settingsbtn" parent="onscreen btns" instance=ExtResource("12_7brbo")]
+anchors_preset = -1
+anchor_right = 0.132
+anchor_bottom = 0.163
+offset_left = 2500.0
+offset_top = 1280.0
+offset_right = 2500.55
+offset_bottom = 1280.15

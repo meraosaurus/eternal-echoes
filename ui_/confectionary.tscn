@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjb37prk3hcl6"]
+
+[ext_resource type="Script" path="res://ui_/confectionary.gd" id="1_0sy4m"]
+[ext_resource type="Texture2D" uid="uid://bqmf4hycc1hrb" path="res://Slorey α▒¿αºÄ assets/UI/confectionary button img.PNG" id="1_cc5rh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ox0hh"]
+
+[node name="confectionary" type="Control"]
+layout_mode = 3
+anchor_left = -0.003
+anchor_right = 0.202
+anchor_bottom = 0.225
+offset_left = 5.442
+offset_right = -12.428
+offset_bottom = -16.525
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0sy4m")
+
+[node name="confectionary Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ox0hh")
+icon = ExtResource("1_cc5rh")
+flat = true
+
+[connection signal="pressed" from="confectionary Button" to="." method="_on_confectionary_button_pressed"]

@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4l50qypmm0c3"]
+
+[ext_resource type="Texture2D" uid="uid://mbbarkraxpdu" path="res://Slorey α▒¿αºÄ assets/UI/ui screens_tabs/settings.PNG" id="1_tw74k"]
+[ext_resource type="PackedScene" uid="uid://bc15qafemulog" path="res://ui_/volume.tscn" id="2_3og50"]
+[ext_resource type="Texture2D" uid="uid://42o6re0m6qy3" path="res://ui art/dragger.PNG" id="3_jntlc"]
+
+[node name="settings" type="Control"]
+layout_mode = 3
+anchor_right = 0.824
+anchor_bottom = 0.812
+offset_right = -41.7361
+offset_bottom = -29.428
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 21.0
+offset_right = 924.0
+offset_bottom = 684.0
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("1_tw74k")
+
+[node name="music" parent="." instance=ExtResource("2_3og50")]
+layout_mode = 2
+offset_left = 570.0
+offset_top = 762.0
+offset_right = 1007.0
+offset_bottom = 844.0
+theme_override_icons/grabber = ExtResource("3_jntlc")
+theme_override_icons/grabber_highlight = ExtResource("3_jntlc")
+busname = "music"
+
+[node name="sound" parent="." instance=ExtResource("2_3og50")]
+layout_mode = 2
+offset_left = 582.0
+offset_top = 605.0
+offset_right = 1007.0
+offset_bottom = 687.0
+theme_override_icons/grabber = ExtResource("3_jntlc")
+theme_override_icons/grabber_highlight = ExtResource("3_jntlc")
+busname = "sound"

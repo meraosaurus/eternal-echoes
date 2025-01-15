@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cwelnesjopwri"
+path="res://.godot/imported/ElevenLabs_2024-07-26T23_21_41_Nicole_pre_s35_sb75_se0_b_m2.mp3-426f6b2271a32bc2c76e78f88b3b33fd.mp3str"
+
+[deps]
+
+source_file="res://Slorey α▒¿αºÄ assets/sounds/dialouge/ElevenLabs_2024-07-26T23_21_41_Nicole_pre_s35_sb75_se0_b_m2.mp3"
+dest_files=["res://.godot/imported/ElevenLabs_2024-07-26T23_21_41_Nicole_pre_s35_sb75_se0_b_m2.mp3-426f6b2271a32bc2c76e78f88b3b33fd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

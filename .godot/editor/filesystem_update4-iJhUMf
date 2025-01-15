@@ -1,0 +1,14 @@
+res://Levels/Level_1/grand etang alt.tscn
+res://inventory/playerinv.tres
+res://auto-save system/scenes/start.tscn
+res://inventory/inventory_ui.tscn
+res://Levels/Level_1/village.tscn
+res://ui_/confectionary_ui.tscn
+res://ui_/questscreen.tscn
+res://ui_/closedbtn.tscn
+res://ui_/close.tscn
+res://inventory/itemsuiinv.tscn
+res://crafting/cooking.tscn
+res://scenes/grandetangcabin.tscn
+res://crafting/guava.tscn
+res://crafting/blender.tscn

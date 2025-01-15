@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ts3y16lg424t"
+path="res://.godot/imported/fighting_with_sword_.mp3-d50a08c4800981d991b64e0919b6627e.mp3str"
+
+[deps]
+
+source_file="res://Slorey α▒¿αºÄ assets/sounds/fighting_with_sword_.mp3"
+dest_files=["res://.godot/imported/fighting_with_sword_.mp3-d50a08c4800981d991b64e0919b6627e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

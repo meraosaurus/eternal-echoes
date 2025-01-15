@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhh1yk808qoni"]
+
+[ext_resource type="Texture2D" uid="uid://bf6onawcwhcm8" path="res://Slorey α▒¿αºÄ assets/UI/home screen ui/settings icon.PNG" id="2_cuaxw"]
+
+[sub_resource type="GDScript" id="GDScript_2d21v"]
+script/source = "extends Control
+"
+
+[node name="settings_button" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1814.0
+offset_bottom = 1269.0
+script = SubResource("GDScript_2d21v")
+
+[node name="SettingsButton" type="MenuButton" parent="."]
+layout_mode = 0
+offset_left = 2518.0
+offset_top = 1297.0
+offset_right = 5826.0
+offset_bottom = 3855.0
+scale = Vector2(0.1, 0.1)
+icon = ExtResource("2_cuaxw")

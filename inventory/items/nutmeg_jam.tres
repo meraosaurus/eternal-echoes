@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InvtItem" load_steps=3 format=3 uid="uid://cl0txvhijyw8c"]
+
+[ext_resource type="Texture2D" uid="uid://d35u5bwiavbd3" path="res://inventory/inventory art/nutmeg jam inventory.png" id="1_k87wp"]
+[ext_resource type="Script" path="res://inventory/inventory_item.gd" id="1_y6lsw"]
+
+[resource]
+script = ExtResource("1_y6lsw")
+name = "nutmeg  Jam"
+texture = ExtResource("1_k87wp")

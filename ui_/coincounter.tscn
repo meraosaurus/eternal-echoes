@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4piyt2a6xi45"]
+
+[ext_resource type="Texture2D" uid="uid://c1d534qgnpviq" path="res://Slorey α▒¿αºÄ assets/UI/home screen ui/coin_icon.PNG" id="1_dgook"]
+[ext_resource type="FontFile" uid="uid://ce8mt4pxgboa4" path="res://Slorey α▒¿αºÄ assets/fonts/Title/hand_of_sean/Hand_Of_Sean_Demo.ttf" id="2_yrwvu"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchor_top = 0.002
+anchor_right = 0.022
+anchor_bottom = 0.019
+offset_top = 0.462
+offset_right = -0.908003
+offset_bottom = -1.11101
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_top = -3.0
+offset_right = 40.0
+offset_bottom = 36.0
+texture = ExtResource("1_dgook")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 9.0
+offset_right = 28.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_yrwvu")
+theme_override_font_sizes/font_size = 6
+text = "0"

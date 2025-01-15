@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://brdblx6pm7f0i"]
+
+[ext_resource type="Script" path="res://auto-save system/scripts/GameManager.gd" id="1_tfbc2"]
+
+[node name="GameManager" type="Node"]
+script = ExtResource("1_tfbc2")

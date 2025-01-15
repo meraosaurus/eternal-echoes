@@ -1,0 +1,111 @@
+[gd_scene load_steps=16 format=3 uid="uid://cb2pr8ryc4due"]
+
+[ext_resource type="Texture2D" uid="uid://sycj0lsurrny" path="res://crafting/interiors/Pots8.PNG" id="1_6cxr8"]
+[ext_resource type="Script" path="res://crafting/pot.gd" id="1_7ik0p"]
+[ext_resource type="Texture2D" uid="uid://jfe43e6mlial" path="res://crafting/interiors/Pots6.PNG" id="3_lf47m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6hme"]
+atlas = ExtResource("1_6cxr8")
+region = Rect2(0, 225, 225, 225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ddv0o"]
+atlas = ExtResource("3_lf47m")
+region = Rect2(0, 0, 225, 225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cyeue"]
+atlas = ExtResource("3_lf47m")
+region = Rect2(225, 0, 225, 225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1syxr"]
+atlas = ExtResource("3_lf47m")
+region = Rect2(450, 0, 225, 225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jemex"]
+atlas = ExtResource("3_lf47m")
+region = Rect2(675, 0, 225, 225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ubux"]
+atlas = ExtResource("3_lf47m")
+region = Rect2(900, 0, 225, 225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_naoof"]
+atlas = ExtResource("3_lf47m")
+region = Rect2(1125, 0, 225, 225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mo3yq"]
+atlas = ExtResource("3_lf47m")
+region = Rect2(1350, 0, 225, 225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1pdm"]
+atlas = ExtResource("3_lf47m")
+region = Rect2(1575, 0, 225, 225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15xms"]
+atlas = ExtResource("3_lf47m")
+region = Rect2(0, 225, 225, 225)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_215ta"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6hme")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ddv0o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cyeue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1syxr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jemex")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ubux")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_naoof")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mo3yq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q1pdm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15xms")
+}],
+"loop": true,
+"name": &"guava_cook",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r4o06"]
+radius = 33.0151
+
+[node name="pot" type="Node2D"]
+script = ExtResource("1_7ik0p")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-6, 9)
+scale = Vector2(0.624444, 0.668889)
+sprite_frames = SubResource("SpriteFrames_215ta")
+animation = &"empty"
+
+[node name="pot" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pot"]
+position = Vector2(6, 0)
+shape = SubResource("CircleShape2D_r4o06")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="area_entered" from="pot" to="." method="_on_pot_area_entered"]
+[connection signal="input_event" from="pot" to="." method="_on_pot_input_event"]

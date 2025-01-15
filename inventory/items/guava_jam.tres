@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InvtItem" load_steps=3 format=3 uid="uid://oe4narp38i2t"]
+
+[ext_resource type="Texture2D" uid="uid://dojnh7qb45o3d" path="res://inventory/inventory art/inventory guava jam.png" id="1_3w8yt"]
+[ext_resource type="Script" path="res://inventory/inventory_item.gd" id="1_haqal"]
+
+[resource]
+script = ExtResource("1_haqal")
+name = "Guava  Jam"
+texture = ExtResource("1_3w8yt")

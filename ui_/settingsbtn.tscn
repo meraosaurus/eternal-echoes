@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgwlkfamrs8r5"]
+
+[ext_resource type="Script" path="res://ui_/settingsbtn.gd" id="1_tgjlj"]
+[ext_resource type="Texture2D" uid="uid://bf6onawcwhcm8" path="res://Slorey α▒¿αºÄ assets/UI/home screen ui/settings icon.PNG" id="2_jqpqo"]
+
+[node name="settingsbtn" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1574.0
+offset_bottom = -1062.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tgjlj")
+
+[node name="settingsbtn" type="Button" parent="."]
+layout_mode = 0
+offset_right = 2727.0
+offset_bottom = 2490.0
+scale = Vector2(0.1, 0.1)
+icon = ExtResource("2_jqpqo")
+flat = true
+
+[connection signal="pressed" from="settingsbtn" to="." method="_on_settingsbtn_pressed"]

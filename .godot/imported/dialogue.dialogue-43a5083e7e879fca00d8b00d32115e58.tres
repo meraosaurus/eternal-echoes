@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_0xy51"]
+
+[resource]
+script = ExtResource("1_0xy51")
+using_states = PackedStringArray()
+titles = {
+"yes": "2"
+}
+character_names = PackedStringArray("Vanessa")
+first_title = "2"
+lines = {
+"1": {
+"id": "1",
+"next_id": "2",
+"text": "yes",
+"type": &"title"
+},
+"2": {
+"character": "Vanessa",
+"character_replacements": Array[Dictionary]([]),
+"id": "2",
+"next_id": "3",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "[[Hi|Hello|Howdy]], this is some dialogue.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Hi|Hello|Howdy]], this is some dialogue.",
+"type": &"dialogue"
+},
+"3": {
+"id": "3",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+}
+}
+raw_text = "~ yes
+Vanessa: [[Hi|Hello|Howdy]], this is some dialogue.
+=> END"
+metadata/dialogue_manager_version = "2.44.1"

@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=3 uid="uid://dcofalsshvf8m"]
+
+[ext_resource type="Texture2D" uid="uid://cxihuv86ii78q" path="res://Slorey α▒¿αºÄ assets/UI/home screen ui/stats icon.PNG" id="1_2wkb5"]
+[ext_resource type="Script" path="res://ui_/characterstats.gd" id="1_8lt4m"]
+[ext_resource type="FontFile" uid="uid://ce8mt4pxgboa4" path="res://Slorey α▒¿αºÄ assets/fonts/Title/hand_of_sean/Hand_Of_Sean_Demo.ttf" id="2_6pyaq"]
+[ext_resource type="Texture2D" uid="uid://bcyg2sex4kagd" path="res://Slorey α▒¿αºÄ assets/UI/home screen ui/edit-text.png" id="4_5jk0w"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_4lw4x"]
+specular_color = Color(0.984314, 0.847059, 0.85098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_84d0k"]
+bg_color = Color(0.552941, 0.388235, 0.192157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1iu1h"]
+bg_color = Color(0.552941, 0.388235, 0.192157, 1)
+border_color = Color(0.250145, 0.150613, 0.101486, 1)
+
+[node name="character_stat" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 547.0
+offset_bottom = 206.0
+script = ExtResource("1_8lt4m")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 548.0
+offset_bottom = 205.0
+texture = ExtResource("1_2wkb5")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 1
+offset_left = 257.0
+offset_top = 139.0
+offset_right = 533.0
+offset_bottom = 193.0
+texture_over = SubResource("CanvasTexture_4lw4x")
+
+[node name="Label" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 49.0
+offset_right = 504.0
+offset_bottom = 113.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0.239216, 0.305882, 0.572549, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_6pyaq")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_84d0k")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1iu1h")
+placeholder_text = "Player"
+flat = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.057
+anchor_bottom = 0.151
+offset_left = 505.0
+offset_top = 67.0
+offset_right = 993.821
+offset_bottom = 555.894
+scale = Vector2(0.06, 0.06)
+icon = ExtResource("4_5jk0w")
+flat = true
+
+[connection signal="text_submitted" from="Label" to="." method="_on_label_text_submitted"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
